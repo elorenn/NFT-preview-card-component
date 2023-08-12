@@ -74,15 +74,14 @@ figure > img {
   display: none;
 }
 
-.card:hover,
-.card:focus {
-  .img-wrapper::before {
-    opacity: 0.5;
-  }
+.img-wrapper:hover::before,
+.img-wrapper:focus::before {
+  opacity: 0.5;
+}
 
-  .img-wrapper::after {
-    display: flex;
-  }
+.img-wrapper:hover::after,
+.img-wrapper:focus::after {
+  display: flex;
 }
 
 .card h1 {
