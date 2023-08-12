@@ -35,7 +35,7 @@ body {
   cursor: default;
 }
 
-.card img {
+figure > img {
   max-width: 100%;
   display: block;
 }
@@ -110,6 +110,12 @@ figure.img-wrapper:hover > .img-wrapper::before {
 .card .creator,
 .card .time {
   font-weight: 400;
+}
+
+p > img {
+  vertical-align: text-bottom;
+  height: 18px;
+  margin-right: 3px;
 }
 
 .card .price {
