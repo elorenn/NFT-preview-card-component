@@ -1,6 +1,6 @@
 # NFT preview card component
 
-Checkout out the live site [here](https://elorenn.github.io/NFT-preview-card-component-main/).
+Checkout out the live site [here](https://elorenn.github.io/NFT-preview-card-component/).
 
 ![A ui card containing an NFT preview, heading, and caption.](design/desktop-design.jpg)
 
