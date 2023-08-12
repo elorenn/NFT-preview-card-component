@@ -1,0 +1,159 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --font: "Outfit", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  background-color: var(--main-bg);
+  font-family: var(--font);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  text-align: start;
+  max-width: 20em;
+  padding: 1.5em;
+  cursor: default;
+}
+
+.card img {
+  max-width: 100%;
+  display: block;
+}
+
+.img-wrapper {
+  position: relative;
+  border-radius: 10px;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-wrapper::before,
+.img-wrapper::after {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+}
+
+.img-wrapper::before {
+  background-color: var(--cyan);
+  opacity: 0.5;
+}
+
+.img-wrapper::after {
+  content: url("../images/icon-view.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .card:hover,
+.card:focus {
+  .img-wrapper::before {
+    /* z-index: 3; */
+    background-color: red;
+  }
+} */
+
+figure.img-wrapper:hover > .img-wrapper::before {
+  background-color: red;
+}
+
+.card h1 {
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.card h1:hover,
+.card .creator:hover {
+  color: var(--cyan);
+}
+
+.card p {
+  color: var(--soft-blue);
+  /* font-size: 18px; */
+  font-weight: 300;
+}
+
+.card .creator {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card .creator,
+.card .time {
+  font-weight: 400;
+}
+
+.card .price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+section.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  border: 0.5px solid var(--line);
+}
+
+section.credit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.credit > img {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--main-bg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--soft-blue);
+}
+
+.attribution a {
+  color: hsl(215, 51%, 80%);
+}
