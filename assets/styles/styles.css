@@ -62,7 +62,8 @@ figure > img {
 
 .img-wrapper::before {
   background-color: var(--cyan);
-  opacity: 0.5;
+  transition: opacity 0.3s ease-out 0s;
+  opacity: 0;
 }
 
 .img-wrapper::after {
@@ -70,18 +71,18 @@ figure > img {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
-/* .card:hover,
+.card:hover,
 .card:focus {
   .img-wrapper::before {
-    /* z-index: 3; */
-    background-color: red;
+    opacity: 0.5;
   }
-} */
 
-figure.img-wrapper:hover > .img-wrapper::before {
-  background-color: red;
+  .img-wrapper::after {
+    display: flex;
+  }
 }
 
 .card h1 {
