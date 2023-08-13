@@ -35,7 +35,7 @@ body {
   cursor: default;
 }
 
-figure > img {
+.img-wrapper > img {
   max-width: 100%;
   display: block;
 }
